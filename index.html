@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Muhammad Taha Nadeem — Software Engineering Student & Freelance UI/UX Designer. Portfolio showcasing full-stack web development, AI integration, and modern UI/UX design projects.">
+  <meta name="theme-color" content="#0a0a1a">
+  <title>Muhammad Taha Nadeem | Software Engineer & UI/UX Designer</title>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-ring"></div>
+    <span class="loader-text">Loading</span>
+  </div>
+
+  <!-- ============ MOBILE NAV OVERLAY ============ -->
+  <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav id="main-nav" aria-label="Primary navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Muhammad Taha Nadeem — Home">MTN.</a>
+
+      <ul id="nav-links" class="nav-links" role="list">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="hero">
+      <div class="hero-bg-orb" aria-hidden="true"></div>
+      <div class="hero-bg-orb" aria-hidden="true"></div>
+      <div class="hero-bg-orb" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <!-- Profile Picture -->
+        <div class="profile-pic-wrapper">
+          <img src="assets/profile.jpg" alt="MUHAMMAD TAHA NADEEM" class="profile-pic">
+        </div>
+
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          Available for freelance work
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="hero-title-gradient">Muhammad Taha Nadeem</span>
+        </h1>
+
+        <div class="hero-typewriter-wrapper" aria-live="polite">
+          <span id="typewriter-text" class="hero-typewriter"></span><span class="typewriter-cursor"
+            aria-hidden="true"></span>
+        </div>
+
+        <p class="hero-description">
+          I craft elegant digital experiences through full-stack development and thoughtful UI/UX design — turning
+          complex ideas into intuitive, high-performance web applications.
+        </p>
+
+        <!-- Hero Social Links (Inline SVG) -->
+        <div class="hero-social">
+          <a href="https://github.com/MTahaNadeem" class="social-icon-link" aria-label="GitHub" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mtahanadeem/" class="social-icon-link" aria-label="LinkedIn"
+            target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="https://x.com/TahaNadeem478" class="social-icon-link" aria-label="Twitter / X" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            View My Work
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="assets/Muhammad Taha Nadeem_Resume.pdf" class="btn btn-secondary" download>
+            <span aria-hidden="true">📄</span>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">My Story</h2>
+        <p class="section-subtitle">Passionate about building products that make a real difference.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image-card">
+            <div class="about-avatar-placeholder" aria-hidden="true">👨‍💻</div>
+          </div>
+          <div class="about-floating-card">⚡ Full-Stack Dev</div>
+          <div class="about-floating-card">🎨 UI/UX Designer</div>
+        </div>
+
+        <div class="about-text reveal">
+          <h3>Building the Future, One Pixel at a Time</h3>
+          <p>
+            I'm a Software Engineering student with a deep passion for creating digital products that merge technical
+            excellence with stunning design. My journey started with curiosity about how the web works, and it quickly
+            evolved into a career path combining full-stack development with freelance UI/UX design.
+          </p>
+          <p>
+            Whether it's architecting scalable backends with Node.js and FastAPI, crafting responsive frontends with
+            React and Next.js, or integrating AI capabilities into real-world applications — I'm driven by the challenge
+            of solving complex problems with elegant solutions. I thrive in collaborative environments and have shipped
+            multiple team projects alongside talented peers.
+          </p>
+
+          <div class="about-stats">
+            <div class="about-stat">
+              <div class="about-stat-number">7+</div>
+              <div class="about-stat-label">Projects Shipped</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-number">2+</div>
+              <div class="about-stat-label">Years of Learning</div>
+            </div>
+            <div class="about-stat">
+              <div class="about-stat-number">7+</div>
+              <div class="about-stat-label">Tech Stack Skills</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">Skills</span>
+        <h2 class="section-title">My Expertise</h2>
+        <p class="section-subtitle">Technologies and tools I work with to bring ideas to life.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">Full-Stack Web Development</span>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">React</span>
+            <span class="skill-percent">88%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="88%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">Next.js</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">Node.js</span>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="82%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">AI Integration</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="80%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">FastAPI</span>
+            <span class="skill-percent">78%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="78%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item glass-card reveal">
+          <div class="skill-header">
+            <span class="skill-name">GSAP Animations</span>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-bar-track">
+            <div class="skill-bar-fill" data-width="75%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">Projects</span>
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">A selection of projects I've designed and developed.</p>
+      </div>
+
+      <div class="filter-buttons reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="full-stack">Full-Stack</button>
+        <button class="filter-btn" data-filter="app">App</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Doctor's Cafe -->
+        <article class="project-card glass-card fade-in reveal" data-tags="frontend full-stack">
+          <div class="project-image">
+            <img src="assets/doctorcafe.png" alt="Doctor's Cafe Preview" class="project-thumbnail">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Frontend</span>
+              <span class="project-tag">Full-Stack</span>
+              <span class="project-tag">Web App</span>
+            </div>
+            <h3 class="project-title">Doctor's Cafe</h3>
+            <p class="project-description">
+              A modern web application designed to streamline healthcare interactions with an intuitive, patient-first
+              interface and a responsive design system.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/MTahaNadeem/doctors-cafe" class="project-link" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: SmartBid AI -->
+        <article class="project-card glass-card fade-in reveal" data-tags="ai full-stack">
+          <div class="project-image">
+            <img src="assets/ai_bid.png" alt="SmartBid AI Preview" class="project-thumbnail">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">AI</span>
+              <span class="project-tag">FastAPI</span>
+              <span class="project-tag">LLMs</span>
+            </div>
+            <h3 class="project-title">SmartBid AI</h3>
+            <p class="project-description">
+              An AI-powered bid and proposal response engine built with FastAPI and large language models, automating
+              intelligent proposal generation for businesses.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/MTahaNadeem/SmartBid-AI" class="project-link" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+
+        <!-- Project 5: StudyAI -->
+        <article class="project-card glass-card fade-in reveal" data-tags="ai full-stack app">
+          <div class="project-image">
+            <img src="assets/studyAI.png" alt="StudyAI Preview" class="project-thumbnail">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">AI</span>
+              <span class="project-tag">Full-Stack</span>
+              <span class="project-tag">Platform</span>
+            </div>
+            <h3 class="project-title">StudyAI</h3>
+            <p class="project-description">
+              An AI-powered platform for students that provides intelligent study assistance, personalized learning
+              paths, and automated content summarization to boost academic performance.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/MTahaNadeem/StudyAI_AI-Platform-for-students" class="project-link"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6: RoamEase -->
+        <article class="project-card glass-card fade-in reveal" data-tags="full-stack app">
+          <div class="project-image">
+            <img src="assets/roamease.png" alt="RoamEase Preview" class="project-thumbnail">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">App</span>
+              <span class="project-tag">Travel</span>
+            </div>
+            <h3 class="project-title">RoamEase</h3>
+            <p class="project-description">
+              A smart travel itinerary and expense management platform that helps travelers plan trips, track spending,
+              and organize their journeys with an intuitive dashboard.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/MTahaNadeem/RoamEase---Smart-Travel-Itinerary-Expense-Management-Platform"
+              class="project-link" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 7: Rental System -->
+        <article class="project-card glass-card fade-in reveal" data-tags="full-stack app">
+          <div class="project-image">
+            <img src="assets/rentalsystem.png" alt="Rental System Preview" class="project-thumbnail">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Full-Stack</span>
+              <span class="project-tag">App</span>
+              <span class="project-tag">Management</span>
+            </div>
+            <h3 class="project-title">Rental System</h3>
+            <p class="project-description">
+              A comprehensive rental management system for vehicles, tools, and books — featuring inventory tracking,
+              user authentication, booking flows, and admin dashboards.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/MTahaNadeem/Rental-System-Vehicals-Tools-Books-" class="project-link"
+              target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 8: Multi-Factor Authentication -->
+        <article class="project-card glass-card fade-in reveal" data-tags="full-stack app">
+          <div class="project-image">
+            <img src="assets/multifactor.png" alt="Multi-Factor Authentication Preview" class="project-thumbnail">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="project-tag">Full-Stack</span>
+              <span class="project-tag">App</span>
+              <span class="project-tag">Security</span>
+            </div>
+            <h3 class="project-title">Multi-Factor Authentication</h3>
+            <p class="project-description">
+              A robust multi-factor authentication system implementing layered security protocols including OTP, email
+              verification, and biometric checks for secure user identity management.
+            </p>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/MTahaNadeem/Multi-Factor-Authontication" class="project-link" target="_blank"
+              rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              GitHub <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="section">
+      <div class="section-header reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Have a project in mind? Let's build something great together.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Get in Touch</h3>
+          <p>
+            I'm always excited to discuss new projects, creative ideas, or opportunities to be part of something
+            meaningful.
+          </p>
+
+          <div class="contact-method">
+            <div class="contact-method-icon" aria-hidden="true">📧</div>
+            <div>
+              <div class="contact-method-label">Email</div>
+              <div class="contact-method-value">tahanadeem478@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-method-label">Location</div>
+              <div class="contact-method-value">Available Remote / Worldwide</div>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon" aria-hidden="true">⏰</div>
+            <div>
+              <div class="contact-method-label">Response Time</div>
+              <div class="contact-method-value">Within 24 hours</div>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form-card glass-card reveal" novalidate>
+          <div id="form-fields">
+            <div class="form-group">
+              <label for="input-name" class="form-label">Full Name</label>
+              <input type="text" id="input-name" class="form-input" placeholder="Your Name..." autocomplete="name">
+              <div id="error-name" class="form-error" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="input-email" class="form-label">Email Address</label>
+              <input type="email" id="input-email" class="form-input" placeholder="user@example.com"
+                autocomplete="email">
+              <div id="error-email" class="form-error" role="alert"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="input-message" class="form-label">Message</label>
+              <textarea id="input-message" class="form-textarea" placeholder="Tell me about your project..."
+                rows="5"></textarea>
+              <div id="error-message" class="form-error" role="alert"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Send Message
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div id="form-success" class="form-success">
+            <div class="form-success-icon" aria-hidden="true">✓</div>
+            <h4>Message Sent!</h4>
+            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="main-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Muhammad Taha Nadeem</span>
+        <span class="footer-copy">&copy; 2026 Muhammad Taha Nadeem. All rights reserved.</span>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/MTahaNadeem" class="social-icon-link" aria-label="GitHub" target="_blank"
+          rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mtahanadeem/" class="social-icon-link" aria-label="LinkedIn"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a href="https://x.com/TahaNadeem478" class="social-icon-link" aria-label="Twitter / X" target="_blank"
+          rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+        <a href="mailto:tahanadeem478@gmail.com" class="social-icon-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script (placed before closing body to avoid null errors) -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
